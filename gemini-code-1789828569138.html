@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Essa - DevOps & Cloud Engineer</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: '#7c3aed',
+                        brandHover: '#6d28d9',
+                        brandLight: 'rgba(124, 58, 237, 0.1)',
+                        bgLight: '#f8f9fa'
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        
+        /* Fixed Hero Image Glow */
+        .hero-glow-container {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            width: 100%;
+            max-width: 450px;
+        }
+        
+        .hero-glow-container::before {
+            content: '';
+            position: absolute;
+            top: 5%;
+            right: -5%;
+            bottom: -5%;
+            left: 5%;
+            background-color: rgba(124, 58, 237, 0.15); /* Brand purple with opacity */
+            border-radius: 30px;
+            z-index: -1;
+            transition: all 0.3s ease;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: auto;
+            border-radius: 20px;
+            object-fit: cover;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        /* Hide scrollbar for clean UI but keep functionality */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #c4b5fd; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7c3aed; 
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 antialiased overflow-x-hidden selection:bg-brand selection:text-white">
+
+    <nav class="w-full bg-white/95 backdrop-blur-md fixed top-0 z-50 transition-all duration-300 shadow-sm border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-3xl font-extrabold tracking-tight">
+                <span class="text-brand">Essa Portfolio</span>
+            </a>
+            
+            <!-- Desktop Links -->
+            <div class="hidden md:flex space-x-8 items-center font-medium text-gray-600">
+                <a href="#home" class="hover:text-brand transition-colors">Home</a>
+                <a href="#about" class="hover:text-brand transition-colors">About</a>
+                <a href="#portfolio" class="hover:text-brand transition-colors">Portfolio</a>
+                <a href="#contact" class="hover:text-brand transition-colors">Contact</a>
+            </div>
+            
+            <!-- CTA Button -->
+            <div class="hidden md:block">
+                <a href="#contact" class="bg-brand text-white px-6 py-2.5 rounded-lg font-semibold shadow-md shadow-brand/20 hover:bg-brandHover transition-all">
+                    Let's Talk
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-800 text-2xl focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 min-h-screen flex items-center bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10 flex flex-col-reverse lg:flex-row items-center justify-between w-full gap-12 lg:gap-8">
+            
+            <!-- Left Side: Content -->
+            <div class="w-full lg:w-[55%] flex flex-col justify-center text-left relative z-10 mt-8 lg:mt-0">
+                <h2 class="text-xl md:text-2xl font-semibold text-gray-500 mb-2">
+                    Hi, I'm Muhammad Essa
+                </h2>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand leading-tight mb-6">
+                    DevOps & Cloud Engineer
+                </h1>
+                <p class="text-gray-600 text-lg mb-10 leading-relaxed max-w-xl">
+                    I help teams move from manual deployments to automated, reliable delivery. Using cloud, containers and infrastructure as code, I build systems that stay fast, secure and available as you grow.
+                </p>
+                
+                <!-- Action Buttons -->
+                <div class="flex flex-wrap items-center gap-4 mb-10">
+                    <a href="#contact" class="bg-brand text-white px-8 py-3.5 rounded-lg font-semibold shadow-lg shadow-brand/30 hover:bg-brandHover hover:-translate-y-1 transition-all duration-300">
+                        Hire Me
+                    </a>
+                    <a href="#portfolio" class="bg-transparent border-2 border-brand text-brand px-8 py-3.5 rounded-lg font-semibold hover:bg-brandLight transition-all duration-300">
+                        See Projects
+                    </a>
+                </div>
+                
+                <!-- Social Links -->
+                <div class="flex items-center space-x-4">
+                    <a href="https://www.linkedin.com/in/muhammad-essa-566b243a2/" target="_blank" class="w-10 h-10 rounded-lg bg-brandLight text-brand flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                        <i class="fab fa-linkedin-in text-lg"></i>
+                    </a>
+                    <a href="https://github.com/thisisessa" target="_blank" class="w-10 h-10 rounded-lg bg-brandLight text-brand flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                        <i class="fab fa-github text-lg"></i>
+                    </a>
+                    <a href="https://www.instagram.com/3ss4xx/" target="_blank" class="w-10 h-10 rounded-lg bg-brandLight text-brand flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                        <i class="fab fa-instagram text-lg"></i>
+                    </a>
+                    <a href="mailto:thisisessa1@gmail.com" class="w-10 h-10 rounded-lg bg-brandLight text-brand flex items-center justify-center hover:bg-brand hover:text-white transition-all">
+                        <i class="fas fa-envelope text-lg"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Right Side: Image with specific exact tag -->
+            <div class="w-full lg:w-[45%] flex justify-center lg:justify-end">
+                <div class="hero-glow-container">
+                    <img src="avatar.png" alt="Muhammad Essa" class="hero-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-bgLight">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="flex flex-col lg:flex-row gap-16">
+                <!-- Bio text -->
+                <div class="lg:w-1/2">
+                    <h2 class="text-brand font-semibold tracking-wider uppercase text-sm mb-2">About Me</h2>
+                    <div class="text-gray-600 space-y-4 leading-relaxed text-lg">
+                        <p>
+                            I am a DevOps Engineer focused on building strong, automated infrastructure. I specialize in cloud platforms (AWS and Azure), containers (Docker and Kubernetes), and Infrastructure as Code (Terraform and Ansible)
+                        </p>
+                        <p>
+                            My work centers on streamlining CI/CD pipelines and improving system uptime. Beyond the tools, I believe in the DevOps culture of teamwork, automation, and continuous improvement. I enjoy working in fast-paced environments where every challenge is an opportunity to improve a process and deliver better results
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Skills Columns -->
+                <div class="lg:w-1/2 grid grid-cols-1 gap-8">
+                    <!-- Tech Confident With -->
+                    <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
+                        <h4 class="text-xl font-bold text-gray-900 mb-5 flex items-center">
+                            <i class="fas fa-laptop-code text-brand mr-3"></i> Tech I'm confident with
+                        </h4>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-600">
+                            <div><strong class="text-gray-900 block mb-1">Cloud</strong> AWS, Azure</div>
+                            <div><strong class="text-gray-900 block mb-1">Containers</strong> Docker, Kubernetes</div>
+                            <div><strong class="text-gray-900 block mb-1">Infrastructure as code</strong> Terraform, Ansible</div>
+                            <div><strong class="text-gray-900 block mb-1">CI/CD</strong> Jenkins, GitHub Actions, GitLab</div>
+                            <div><strong class="text-gray-900 block mb-1">Monitoring</strong> Prometheus, Grafana</div>
+                            <div><strong class="text-gray-900 block mb-1">Work tools</strong> Jira</div>
+                            <div class="sm:col-span-2"><strong class="text-gray-900 block mb-1">Scripting & automation</strong> Linux, Bash, Python automation, Python Selenium</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="text-left mb-16">
+                <h2 class="text-brand font-semibold tracking-wider uppercase text-sm mb-2">Portfolio</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900">Projects</h3>
+            </div>
+            
+            <!-- Grid for 7 Projects -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="bg-bgLight rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand/30 transition-all duration-300 group flex flex-col h-full">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-brand text-xl mb-6 shadow-sm"><i class="fas fa-shield-alt"></i></div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-brand transition-colors">Orchestrating Automated Incident Response Platform with AI-Driven Playbooks</h4>
+                    <p class="text-gray-600 text-sm flex-grow">Built an end-to-end automated incident response platform combining AI-driven detection, SOAR-based playbook automation, digital forensics, and recovery orchestration for Enterprise Security.</p>
+                </div>
+
+                <div class="bg-bgLight rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand/30 transition-all duration-300 group flex flex-col h-full">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-brand text-xl mb-6 shadow-sm"><i class="fas fa-server"></i></div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-brand transition-colors">Netflix-Production-Grade-DevSecOps-Engineering-Platform</h4>
+                    <p class="text-gray-600 text-sm flex-grow">Designed and implemented an end-to-end DevSecOps engineering platform. Delivered 70% deployment automation, 50% faster release cycles while ensuring high security standards.</p>
+                </div>
+
+                <div class="bg-bgLight rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand/30 transition-all duration-300 group flex flex-col h-full">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-brand text-xl mb-6 shadow-sm"><i class="fas fa-project-diagram"></i></div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-brand transition-colors">End-to-End DevSecOps CI/CD Pipeline for Secure K8s Deployment</h4>
+                    <p class="text-gray-600 text-sm flex-grow">Automated the complete software delivery lifecycle from source code to secure Kubernetes deployment with continuous monitoring. Achieved 70%+ deployment process automation.</p>
+                </div>
+
+                <div class="bg-bgLight rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand/30 transition-all duration-300 group flex flex-col h-full">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-brand text-xl mb-6 shadow-sm"><i class="fas fa-shopping-cart"></i></div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-brand transition-colors">Microservice E-Commerce project CI/CD with Jenkins on Kubernetes EKS</h4>
+                    <p class="text-gray-600 text-sm flex-grow">Built and deployed a resilient Microservices E-Commerce Application on Amazon Elastic Kubernetes Service (EKS) with approximately 90% automated CI/CD workflow.</p>
+                </div>
+
+                <div class="bg-bgLight rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand/30 transition-all duration-300 group flex flex-col h-full">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-brand text-xl mb-6 shadow-sm"><i class="fas fa-globe"></i></div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-brand transition-colors">Wanderlust-DevSecOps-GitOps-project</h4>
+                    <p class="text-gray-600 text-sm flex-grow">A comprehensive End-to-End DevSecOps & GitOps Project implementing industry standard tools like Jenkins, Docker, Kubernetes, Terraform, Trivy, OWASP Dependency-Check, and SonarQube.</p>
+                </div>
+
+                <div class="bg-bgLight rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand/30 transition-all duration-300 group flex flex-col h-full">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-brand text-xl mb-6 shadow-sm"><i class="fas fa-network-wired"></i></div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-brand transition-colors">Multi-Environment AWS Infrastructure with Terraform & Ansible</h4>
+                    <p class="text-gray-600 text-sm flex-grow">Designed and automated a scalable multi-environment AWS infrastructure using Terraform and Ansible, dynamically provisioning EC2 instances, Security Groups, S3, and DynamoDB.</p>
+                </div>
+
+                <div class="bg-bgLight rounded-2xl p-8 border border-gray-100 shadow-sm hover:shadow-xl hover:border-brand/30 transition-all duration-300 group flex flex-col h-full md:col-span-2 lg:col-span-1">
+                    <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center text-brand text-xl mb-6 shadow-sm"><i class="fas fa-cloud-rain"></i></div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-brand transition-colors">AWS Cross-Region Disaster Recovery (DR) System</h4>
+                    <p class="text-gray-600 text-sm flex-grow">Engineered a highly available AWS Cross-Region Disaster Recovery failover solution using Mumbai as the primary region and Hyderabad as the automated backup region.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-white pt-20 pb-10 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 lg:px-10">
+            <div class="flex flex-col md:flex-row justify-between items-center bg-brandLight rounded-3xl p-10 md:p-14 mb-16 relative overflow-hidden">
+                <!-- Decorative circle -->
+                <div class="absolute -right-10 -top-10 w-40 h-40 bg-brand/10 rounded-full blur-2xl"></div>
+                
+                <div class="mb-8 md:mb-0 text-left relative z-10">
+                    <h3 class="text-2xl md:text-4xl font-bold text-gray-900 mb-3">Ready to scale your infrastructure?</h3>
+                    <p class="text-gray-600 text-lg">Let's discuss how we can build robust systems together.</p>
+                </div>
+                <div class="relative z-10 w-full md:w-auto">
+                    <a href="mailto:thisisessa1@gmail.com" class="w-full md:w-auto bg-brand text-white px-8 py-4 rounded-xl font-bold shadow-lg shadow-brand/30 hover:bg-brandHover hover:-translate-y-1 transition-all inline-flex items-center justify-center">
+                        <i class="fas fa-envelope mr-3"></i> Get In Touch
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-left pb-10 border-b border-gray-100">
+                <div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-4">Location</h4>
+                    <p class="text-gray-500 flex items-center">
+                        <span class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center mr-3"><i class="fas fa-map-marker-alt text-brand"></i></span> 
+                        Karachi, Sindh, Pakistan
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-4">Contact</h4>
+                    <p class="text-gray-500 flex items-center">
+                        <span class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center mr-3"><i class="fas fa-envelope text-brand"></i></span> 
+                        thisisessa1@gmail.com
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold text-gray-900 mb-4">Connect</h4>
+                    <div class="flex space-x-3">
+                        <a href="https://www.linkedin.com/in/muhammad-essa-566b243a2/" target="_blank" class="w-10 h-10 rounded-lg bg-gray-50 flex items-center justify-center text-gray-600 hover:text-white hover:bg-brand transition-all border border-gray-100">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/thisisessa" target="_blank" class="w-10 h-10 rounded-lg bg-gray-50 flex items-center justify-center text-gray-600 hover:text-white hover:bg-brand transition-all border border-gray-100">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/3ss4xx/" target="_blank" class="w-10 h-10 rounded-lg bg-gray-50 flex items-center justify-center text-gray-600 hover:text-white hover:bg-brand transition-all border border-gray-100">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center text-gray-500 text-sm">
+                <p>&copy; <span id="year"></span> Muhammad Essa. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Footer Year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
